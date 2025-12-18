@@ -153,4 +153,54 @@ footer {
 
 header h1 {
     animation: slowGlow 8s infinite;
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 2.5rem 1.2rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+    }
+
+    p {
+        max-width: 100%;
+    }
+
+    article {
+        padding: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
 }
