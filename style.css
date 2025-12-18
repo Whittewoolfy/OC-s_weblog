@@ -1,0 +1,156 @@
+/* =========================
+   AUTUMN WEBLOG — CALEB
+   ========================= */
+
+/* import cozy fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap');
+
+:root {
+    --bg-main: #1c120d;
+    --bg-paper: #2a1b14;
+    --accent-rust: #c26a3a;
+    --accent-gold: #e1b66f;
+    --accent-leaf: #8a4f2c;
+    --text-main: #f1e7dc;
+    --text-soft: #cbb8a3;
+}
+
+/* ===== reset-ish ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background:
+        radial-gradient(circle at top left, #3a2418 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #4b2d1f 0%, transparent 45%),
+        var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* ===== header ===== */
+header {
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(194, 106, 58, 0.15),
+        transparent
+    );
+}
+
+header h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--text-soft);
+    font-style: italic;
+}
+
+/* ===== separators ===== */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--accent-leaf),
+        transparent
+    );
+    margin: 3rem auto;
+    width: 70%;
+}
+
+/* ===== sections ===== */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* ===== headings ===== */
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--accent-rust);
+}
+
+/* ===== images ===== */
+img {
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 6px;
+    max-width: 100%;
+    filter: sepia(10%) contrast(1.05);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    filter: sepia(0%) contrast(1.1);
+}
+
+/* ===== blog entries ===== */
+article {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.03),
+        rgba(0, 0, 0, 0.15)
+    );
+    border-left: 4px solid var(--accent-rust);
+    padding: 1.8rem;
+    margin-bottom: 2.5rem;
+    border-radius: 4px;
+    backdrop-filter: blur(3px);
+}
+
+/* subtle leaf-like hover */
+article:hover {
+    border-left-color: var(--accent-gold);
+}
+
+/* ===== paragraphs ===== */
+p {
+    color: var(--text-main);
+    max-width: 65ch;
+    margin: auto;
+}
+
+/* ===== footer ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.4),
+        transparent
+    );
+}
+
+/* ===== tiny ambient animation ===== */
+@keyframes slowGlow {
+    0% { text-shadow: 0 0 0 rgba(225, 182, 111, 0); }
+    50% { text-shadow: 0 0 10px rgba(225, 182, 111, 0.15); }
+    100% { text-shadow: 0 0 0 rgba(225, 182, 111, 0); }
+}
+
+header h1 {
+    animation: slowGlow 8s infinite;
+}
